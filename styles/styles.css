@@ -12,29 +12,30 @@
 
 :root {
   /* colors */
-  --background-color: white;
-  --light-color: #f8f8f8;
-  --dark-color: #505050;
-  --text-color: #131313;
-  --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
+  --background-color: #f3f2ee;
+  --light-color: #fffdf8;
+  --dark-color: #6b5d4f;
+  --text-color: #2c2c2c;
+  --link-color: #6b5d4f;
+  --link-hover-color: #434343;
 
   /* fonts */
   --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+  --heading-font-family: cormorant, cormorant-fallback, georgia, serif;
+  --heading-font-weight: 300;
 
   /* body sizes */
-  --body-font-size-m: 22px;
-  --body-font-size-s: 19px;
-  --body-font-size-xs: 17px;
+  --body-font-size-m: 18px;
+  --body-font-size-s: 16px;
+  --body-font-size-xs: 14px;
 
   /* heading sizes */
-  --heading-font-size-xxl: 55px;
-  --heading-font-size-xl: 44px;
-  --heading-font-size-l: 34px;
-  --heading-font-size-m: 27px;
-  --heading-font-size-s: 24px;
-  --heading-font-size-xs: 22px;
+  --heading-font-size-xxl: 60px;
+  --heading-font-size-xl: 48px;
+  --heading-font-size-l: 38px;
+  --heading-font-size-m: 28px;
+  --heading-font-size-s: 22px;
+  --heading-font-size-xs: 18px;
 
   /* nav height */
   --nav-height: 64px;
@@ -42,9 +43,9 @@
 
 /* fallback fonts */
 @font-face {
-  font-family: roboto-condensed-fallback;
-  size-adjust: 88.82%;
-  src: local('Arial');
+  font-family: cormorant-fallback;
+  size-adjust: 107%;
+  src: local('Georgia');
 }
 
 @font-face {
@@ -55,18 +56,13 @@
 
 @media (width >= 900px) {
   :root {
-    /* body sizes */
-    --body-font-size-m: 18px;
-    --body-font-size-s: 16px;
-    --body-font-size-xs: 14px;
-
-    /* heading sizes */
-    --heading-font-size-xxl: 45px;
-    --heading-font-size-xl: 36px;
-    --heading-font-size-l: 28px;
-    --heading-font-size-m: 22px;
-    --heading-font-size-s: 20px;
-    --heading-font-size-xs: 18px;
+    /* heading sizes scale up on desktop for display typography */
+    --heading-font-size-xxl: 72px;
+    --heading-font-size-xl: 56px;
+    --heading-font-size-l: 42px;
+    --heading-font-size-m: 32px;
+    --heading-font-size-s: 24px;
+    --heading-font-size-xs: 20px;
   }
 }
 
@@ -107,9 +103,10 @@ h6 {
   margin-top: 0.8em;
   margin-bottom: 0.25em;
   font-family: var(--heading-font-family);
-  font-weight: 600;
+  font-weight: var(--heading-font-weight);
   line-height: 1.25;
   scroll-margin: 40px;
+  color: var(--dark-color);
 }
 
 h1 { font-size: var(--heading-font-size-xxl); }
