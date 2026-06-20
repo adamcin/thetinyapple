@@ -1,0 +1,109 @@
+.contact-form > div {
+  display: grid;
+  gap: 48px;
+  padding: 48px 24px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+@media (width >= 900px) {
+  .contact-form > div {
+    grid-template-columns: 1fr 1fr;
+    padding: 64px 0;
+  }
+}
+
+.contact-form-info h2 {
+  font-size: var(--heading-font-size-l);
+  margin-bottom: 16px;
+}
+
+.contact-form-info p {
+  font-size: var(--body-font-size-s);
+  line-height: 1.7;
+  color: var(--text-color);
+}
+
+.contact-form-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contact-form-field label {
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--dark-color);
+  font-style: italic;
+}
+
+.contact-form-field label span {
+  color: #a07060;
+}
+
+.contact-form-field input,
+.contact-form-field textarea {
+  border: none;
+  border-bottom: 1px solid var(--dark-color);
+  background: transparent;
+  padding: 8px 0;
+  font-size: var(--body-font-size-s);
+  font-family: var(--body-font-family);
+  color: var(--text-color);
+  outline: none;
+  transition: border-color 0.2s;
+  resize: vertical;
+}
+
+.contact-form-field input:focus,
+.contact-form-field textarea:focus {
+  border-bottom-color: var(--text-color);
+}
+
+.contact-form-submit {
+  align-self: flex-start;
+  margin-top: 8px;
+  padding: 12px 32px;
+  font-size: 12px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  background: var(--dark-color);
+  color: var(--background-color);
+  border: 1px solid var(--dark-color);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.contact-form-submit:hover {
+  background: var(--text-color);
+  border-color: var(--text-color);
+}
+
+.contact-form-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.contact-form-status {
+  font-size: var(--body-font-size-xs);
+  padding: 10px 14px;
+  border-radius: 2px;
+  margin: 0;
+}
+
+.contact-form-status[data-type="success"] {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.contact-form-status[data-type="error"] {
+  background: #fdecea;
+  color: #c62828;
+}

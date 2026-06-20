@@ -84,6 +84,14 @@ header {
   height: var(--nav-height);
 }
 
+main {
+  padding-top: var(--nav-height);
+}
+
+body.has-hero-slideshow main {
+  padding-top: 0;
+}
+
 header .header,
 footer .footer {
   visibility: hidden;
